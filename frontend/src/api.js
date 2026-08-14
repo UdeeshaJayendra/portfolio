@@ -17,8 +17,9 @@ import axios from 'axios';
 
 // Create an axios instance with the base URL pointing to our Express backend.
 // In development, the React proxy (set in package.json) forwards /api/* to localhost:5000.
-const API = axios.create({ baseURL: '/api' });
-
+const API = axios.create({
+  baseURL: `${process.env.REACT_APP_API_URL}/api`,
+});
 // ── Request interceptor ────────────────────────────────────────
 // Runs before EVERY request this instance makes.
 // Reads the JWT token from localStorage and adds it to the Authorization header.
