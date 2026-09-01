@@ -149,7 +149,7 @@ async function seed() {
 
   // ── Step 7: Create education ──────────────────────────────────
   await Education.create({
-    institution:  'University of Colombo', // ← Change
+    institution:  'University of Sri Jayawardanapura', // ← Change
     degree:       'Bachelor of Science',
     field:        'Computer Science',
     startDate:    new Date('2022-01-01'),
