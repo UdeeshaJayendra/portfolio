@@ -170,7 +170,7 @@ async function seed() {
       order: 1,
     },
     {
-      name:          'React Developer Certificate',
+      name:          'React  Certificate',
       issuer:        'Meta (via Coursera)',
       issueDate:     new Date('2023-11-20'),
       credentialUrl: 'https://coursera.org/verify/your-cert-id', // ← Change
