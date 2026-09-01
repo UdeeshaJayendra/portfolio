@@ -149,7 +149,7 @@ async function seed() {
 
   // ── Step 7: Create education ──────────────────────────────────
   await Education.create({
-    institution:  'University of Sri Jayawardanapura', // ← Change
+    institution:  'University of Colombo', // ← Change
     degree:       'Bachelor of Science',
     field:        'Computer Science',
     startDate:    new Date('2022-01-01'),
@@ -163,7 +163,7 @@ async function seed() {
   // ── Step 8: Create certifications ────────────────────────────
   await Certification.insertMany([
     {
-      name:          'MongoDB eloper Path',
+      name:          'MongoDB Developer Path',
       issuer:        'MongoDB University',
       issueDate:     new Date('2024-01-15'),
       credentialUrl: 'https://learn.mongodb.com/c/your-cert-id', // ← Change
