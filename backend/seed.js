@@ -15,8 +15,11 @@
  * ⚠️  EDIT THIS FILE with your real info before running it.
  *     Every time you run it, all data is wiped and re-inserted.
  */
+require('dotenv').config({ path: require('path').join(__dirname, '.env') });
 
-require('dotenv').config();
+const dns = require('dns');
+dns.setServers(['8.8.8.8', '8.8.4.4']);
+
 const mongoose      = require('mongoose');
 const bcrypt        = require('bcryptjs');
 const User          = require('./models/User');
@@ -68,7 +71,7 @@ async function seed() {
   await Profile.create({
     name:     'Your Name',            // ← Change
     title:    'Full Stack Developer', // ← Change
-    tagline:  'Building scalable web applications with MERN stack',
+    tagline:  'TEST CHANGE 123 — if you see this it worked',
     bio:      'Passionate full stack developer currently seeking internship opportunities.',
     email:    'your.email@gmail.com', // ← Change
     phone:    '+94 77 000 0000',      // ← Change
@@ -177,7 +180,7 @@ async function seed() {
       order: 2,
     },
   ]);
-  console.log('🏅 Certifications created');
+  console.log('🏅 Certifications ');
 
   console.log('\n✅ Database seeded successfully!');
   console.log(`\n🔑 Admin login: admin@portfolio.com / admin123`);
