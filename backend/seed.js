@@ -52,9 +52,9 @@ async function seed() {
   // CHANGE THESE CREDENTIALS before running seed.js!
   // The password is hashed by the User model's pre('save') hook automatically.
   const adminUser = await new User({
-    name:     'Your Name',           // ← Change this
-    email:    'admin@portfolio.com', // ← Change this — your login email
-    password: 'admin123',            // ← Change this — use a strong password!
+    name:     'udeesha',           // ← Change this
+    email:    'udeesha@portfolio.com', // ← Change this — your login email
+    password: '908@@345dfg',            // ← Change this — use a strong password!
     role:     'admin',               // Only the seeded user gets 'admin' role
   }).save();
   console.log('👤 Admin user created:', adminUser.email);
@@ -69,16 +69,16 @@ async function seed() {
 
   // ── Step 3: Create your profile ───────────────────────────────
   await Profile.create({
-    name:     'Your Name',            // ← Change
-    title:    'Full Stack Developer', // ← Change
-    tagline:  'TEST CHANGE 123 — if you see this it worked',
-    bio:      'Passionate full stack developer currently seeking internship opportunities.',
-    email:    'your.email@gmail.com', // ← Change
-    phone:    '+94 77 000 0000',      // ← Change
+    name:     'Udeesha Jayendra',
+    title:    'Network Engineering Undergraduate',
+    tagline:  '',
+    bio:      'Undergraduate in Network Technology with hands-on experience in network design, configuration, and troubleshooting using Cisco and industry-standard tools. Skilled in TCP/IP, routing and switching, network security fundamentals, and structured cabling. Currently seeking an internship to apply my knowledge in real-world enterprise network environments and grow as a network engineer.',
+    email:    'testudeesha@gmail.com',        // ← confirm this is the one you want public
+    phone:    '+94 715182932',              // ← put your real number
     location: 'Colombo, Sri Lanka',
-    github:   'https://github.com/yourusername',   // ← Change
-    linkedin: 'https://linkedin.com/in/yourusername', // ← Change
-    website:  'https://yourportfolio.com',         // ← Change (optional)
+    github:   'https://github.com/UdeeshaJayendra',    // ← replace with your real GitHub username
+    linkedin: 'https://www.linkedin.com/in/udeesha-rathnayaka-2b1b10362/', // ← replace with your real LinkedIn URL
+    website:  'https://udeesha-portfolio.vercel.app/',    // ← remove this line entirely if you don't have a separate site
   });
   console.log('📋 Profile created');
 
@@ -152,13 +152,13 @@ async function seed() {
 
   // ── Step 7: Create education ──────────────────────────────────
   await Education.create({
-    institution:  'University of Colombo', // ← Change
-    degree:       'Bachelor of Science',
-    field:        'Computer Science',
-    startDate:    new Date('2022-01-01'),
+    institution:  'University of Sri Jayawardenepura', // ← Change
+    degree:       'Bachelor of ICT',
+    field:        'Network Technology',
+    startDate:    new Date('2024-05-31'),
     current:      true, // Still studying — no endDate needed
     gpa:          '3.8/4.0',              // ← Change or remove
-    achievements: ["Dean's List 2023", 'Won University Hackathon 2024'],
+    achievements: ["reading for BICT degree"],
     order: 1,
   });
   console.log('🎓 Education created');
