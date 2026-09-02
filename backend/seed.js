@@ -163,7 +163,7 @@ async function seed() {
   // ── Step 8: Create certifications ────────────────────────────
   await Certification.insertMany([
     {
-      name:          'MongoDB Developer Path',
+      name:          'MongoDB ',
       issuer:        'MongoDB University',
       issueDate:     new Date('2024-01-15'),
       credentialUrl: 'https://learn.mongodb.com/c/your-cert-id', // ← Change
